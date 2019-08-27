@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>force_calibration</name>
+  <version>0.0.0</version>
+  <description>Measure compensations for wrist-mounted FT sensor.</description>
+
+  <maintainer email="yifanh@cmu.edu">Yifan Hou</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>hardware_interfaces</build_depend>
+  <build_depend>roscpp</build_depend>
+
+  <run_depend>hardware_interfaces</run_depend>
+  <run_depend>roscpp</run_depend>
+
+  <export>
+  </export>
+</package>

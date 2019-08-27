@@ -1,0 +1,16 @@
+calibration:
+  Number_of_tilt_x: 3 # at least 2
+  Number_of_tilt_y: 3 # at least 2
+  Max_rotation_about_x_axis: 15 #degree
+  Min_rotation_about_x_axis: -30 #degree
+  Max_rotation_about_y_axis: 30 #degree
+  Min_rotation_about_y_axis: -30 #degree
+
+main_loop_rate: 2
+
+# motion planning speed limit
+vel_max_translation: 100 # mm/s
+acc_max_translation: 500 # mm/s^2
+vel_max_rotation: 0.3 # rad/s
+acc_max_rotation: 10 # rad/s^2
+
