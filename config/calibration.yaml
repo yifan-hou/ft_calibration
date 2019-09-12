@@ -6,11 +6,11 @@ calibration:
   Max_rotation_about_y_axis: 30 #degree
   Min_rotation_about_y_axis: -30 #degree
 
-main_loop_rate: 2
+main_loop_rate: 500
 
 # motion planning speed limit
-vel_max_translation: 100 # mm/s
-acc_max_translation: 500 # mm/s^2
-vel_max_rotation: 0.3 # rad/s
+vel_max_translation: 20 # mm/s
+acc_max_translation: 1000 # mm/s^2
+vel_max_rotation: 0.5 # rad/s
 acc_max_rotation: 10 # rad/s^2
 

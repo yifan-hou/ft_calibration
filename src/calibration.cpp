@@ -26,22 +26,27 @@ void moveTo(double *pose_set) {
   _robot->getCartesian(pose0);
 
   MatrixXd pose_traj;
-  // cout << "[planning]\n";
-  // cout << "pose0: " << pose0[0] << "|" << pose0[1] << "|" << pose0[2] << "|" << pose0[3] << "|" << pose0[4] << "|" << pose0[5] << "|" << pose0[6] << endl;
-  // cout << "pose_set: " << pose_set[0] << "|" << pose_set[1] << "|" << pose_set[2] << "|" << pose_set[3] << "|" << pose_set[4] << "|" << pose_set[5] << "|" << pose_set[6] << endl;
-  // cout << "_kAccMaxTrans: " << _kAccMaxTrans << endl;
-  // cout << "_kVelMaxTrans: " << _kVelMaxTrans << endl;
-  // cout << "_kAccMaxRot: " << _kAccMaxRot << endl;
-  // cout << "_kVelMaxRot: " << _kVelMaxRot << endl;
-  // cout << "_fHz: " << _fHz << endl;
-  // getchar();
+  cout << "[planning]\n";
+  cout << "pose0: " << pose0[0] << "|" << pose0[1] << "|" << pose0[2] << "|" << pose0[3] << "|" << pose0[4] << "|" << pose0[5] << "|" << pose0[6] << endl;
+  cout << "pose_set: " << pose_set[0] << "|" << pose_set[1] << "|" << pose_set[2] << "|" << pose_set[3] << "|" << pose_set[4] << "|" << pose_set[5] << "|" << pose_set[6] << endl;
+  cout << "_kAccMaxTrans: " << _kAccMaxTrans << endl;
+  cout << "_kVelMaxTrans: " << _kVelMaxTrans << endl;
+  cout << "_kAccMaxRot: " << _kAccMaxRot << endl;
+  cout << "_kVelMaxRot: " << _kVelMaxRot << endl;
+  cout << "_fHz: " << _fHz << endl;
+  getchar();
   RUT::MotionPlanningTrapezodial(pose0, pose_set, _kAccMaxTrans, _kVelMaxTrans,
       _kAccMaxRot, _kVelMaxRot, _fHz, &pose_traj);
   int Nsteps = pose_traj.cols();
   ros::Rate pub_rate(_fHz);
   for (int i = 0; i < Nsteps; ++i) {
-    for (int j = 0; j < 7; ++j) pose_send[j] = pose_traj(j, i);
-      _robot->setCartesian(pose_send);
+    cout << "pose_send: ";
+    for (int j = 0; j < 7; ++j) {
+      pose_send[j] = pose_traj(j, i);
+      cout << pose_send[j] << ", ";
+    }
+    cout << endl;
+    _robot->setCartesian(pose_send);
     pub_rate.sleep();
   }
   usleep(500 * 1000); // pause 0.5s
