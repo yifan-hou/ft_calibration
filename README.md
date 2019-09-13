@@ -1,4 +1,4 @@
-#force_calibration
+# ft_calibration
 TODO(yifan) dump file instead of copy paste
 Static calibration of robot tool weight and force-torque sensor offset.
 Start from the current pose, the robot will rotate about world X and Y axis,

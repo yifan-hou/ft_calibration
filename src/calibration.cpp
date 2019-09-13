@@ -54,7 +54,7 @@ void moveTo(double *pose_set) {
 
 int main(int argc, char* argv[]) {
   ROS_INFO_STREAM("Calibrating weight of tool");
-  ros::init(argc, argv, "force_calibration_node");
+  ros::init(argc, argv, "ft_calibration_node");
   ros::NodeHandle hd;
 
   int Nx, Ny;
@@ -102,12 +102,14 @@ int main(int argc, char* argv[]) {
   cout << "[test] initializing ft sensor:\n";
   ati.init(hd, time0);
   cout << "[test] initializing robot:\n";
-  URSocket *ur_robot = URSocket::Instance();
-  ur_robot->init(hd, time0);
+  // URSocket *ur_robot = URSocket::Instance();
+  // ur_robot->init(hd, time0);
+  // _robot = ur_robot;
+  ABBEGM *abb_robot = ABBEGM::Instance();
+  abb_robot->init(hd, time0);
+  _robot = abb_robot;
 
-  _robot = ur_robot;
   _ft = &ati;
-
 
   /**
    * Calibration begins

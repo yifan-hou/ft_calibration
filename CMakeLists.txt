@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(force_calibration)
+project(ft_calibration)
 
 add_definitions(-std=c++11)
 
@@ -22,8 +22,8 @@ catkin_package()
 ###########
 ## Build ##
 ###########
-add_executable(force_calibration_node src/calibration.cpp)
-target_link_libraries(force_calibration_node
+add_executable(ft_calibration_node src/calibration.cpp)
+target_link_libraries(ft_calibration_node
     ${catkin_LIBRARIES}
     ${RUT}
 )

@@ -1,5 +1,0 @@
-<launch>
-  <rosparam file="$(find force_calibration)/config/calibration.yaml" command="load"/>
-  <rosparam file="$(find force_calibration)/config/hardware.yaml" command="load"/>
-  <node pkg="force_calibration" name="force_calibration_node" type="force_calibration_node"  output="screen" />
-</launch>

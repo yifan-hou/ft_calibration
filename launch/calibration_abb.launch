@@ -1,0 +1,5 @@
+<launch>
+  <rosparam file="$(find ft_calibration)/config/abb/calibration.yaml" command="load"/>
+  <rosparam file="$(find ft_calibration)/config/abb/hardware.yaml" command="load"/>
+  <node pkg="ft_calibration" name="ft_calibration_node" type="ft_calibration_node"  output="screen" />
+</launch>
