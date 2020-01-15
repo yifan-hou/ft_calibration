@@ -137,7 +137,8 @@ int main(int argc, char* argv[]) {
   ros::Rate pub_rate(100);
 
   Quaterniond q0(pose[3], pose[4], pose[5], pose[6]);
-  cout << "Alright! Press Enter to begin.." << endl;
+  cout << "Note: you have to set 'transform_sensor_to_tool' in hardware.yaml properly." << endl;
+  cout << "If you have done that, press Enter to begin.." << endl;
   getchar();
 
   // begin rotation & data collection

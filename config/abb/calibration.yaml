@@ -2,9 +2,9 @@ calibration:
   Number_of_tilt_x: 3 # at least 2
   Number_of_tilt_y: 3 # at least 2
   Max_rotation_about_x_axis: 30 #degree
-  Min_rotation_about_x_axis: -15 #degree
-  Max_rotation_about_y_axis: 30 #degree
-  Min_rotation_about_y_axis: -30 #degree
+  Min_rotation_about_x_axis: -10 #degree
+  Max_rotation_about_y_axis: 35 #degree
+  Min_rotation_about_y_axis: -35 #degree
 
 main_loop_rate: 500
 
