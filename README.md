@@ -1,3 +1,11 @@
+# How to use
+1. Check "transform_sensor_to_tool" in hardware.yaml.
+2. Check the parameters in calibration.yaml.
+3. Launch the launch file for your robot.
+4. The robot will rotate about tool origin from the pose before you run this program.
+5. Press Enter through the program. The robot will move once after every press.
+6. In the end, the robot shall move back to the initial pose, the calibration infomation should be printed to screen. Copy-paste them to your hardware.yaml.
+
 # ft_calibration
 TODO(yifan) dump file instead of copy paste
 Static calibration of robot tool weight and force-torque sensor offset.

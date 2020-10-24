@@ -34,14 +34,22 @@ ftsensor:
     tx: 1.2 # maximum: 1
     ty: 1.2 # maximum: 1
     tz: 1.2 # maximum: 1
-  transform_sensor_to_tool: # T_ST
+  transform_sensor_to_tool: # probe on tool changer
     x: 0 # meter
     y: 0
-    z: 0.066
-    qw: 0
+    z: 0.0927
+    qw: 0.9808
     qx: 0
-    qy: 1
-    qz: 0
+    qy: 0
+    qz: 0.1951
+  # transform_sensor_to_tool: # Block palm on tool changer
+  #   x: 0 # meter
+  #   y: 0
+  #   z: 0.066
+  #   qw: 0
+  #   qx: 0
+  #   qy: 1
+  #   qz: 0
 
 ##
 ## Device specific parameters
