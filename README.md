@@ -6,6 +6,15 @@
 5. Press Enter through the program. The robot will move once after every press.
 6. In the end, the robot shall move back to the initial pose, the calibration infomation should be printed to screen. Copy-paste them to your hardware.yaml.
 
+If the calibration result seems abnormal (e.g. gravity is not pointing downwards), it's likely that your transform_sensor_to_tool is wrong.
+
+Test run in force_control package:
+1. Copy-paste the calibration info.
+2. Check "transform_sensor_to_tool".
+3. Check controllers.yaml.
+4. Check test/main.cpp to know what to expect.
+5. Launch.
+
 # ft_calibration
 TODO(yifan) dump file instead of copy paste
 Static calibration of robot tool weight and force-torque sensor offset.

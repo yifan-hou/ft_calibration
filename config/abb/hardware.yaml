@@ -38,10 +38,10 @@ ftsensor:
     x: 0 # meter
     y: 0
     z: 0.0927
-    qw: 0.9808
-    qx: 0
-    qy: 0
-    qz: 0.1951
+    qw: 0
+    qx: 0.7071
+    qy: 0.7071
+    qz: 0
   # transform_sensor_to_tool: # Block palm on tool changer
   #   x: 0 # meter
   #   y: 0
